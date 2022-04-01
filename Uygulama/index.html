@@ -26,9 +26,9 @@
                     <a href="#" class="btn" id="projeler">Projeler</a>
                   <div class="proje">
                     <ul class="proje-list">
-                        <li class="proje-list-item"><a href="#" class="btn">1</a></li>
-                        <li class="proje-list-item"><a href="#" class="btn">2</a></li>
-                        <li class="proje-list-item"><a href="#" class="btn">3</a></li>
+                        <li class="proje-list-item"><a href="#" class="btn">Proje 1</a></li>
+                        <li class="proje-list-item"><a href="#" class="btn">Proje 2</a></li>
+                        <li class="proje-list-item"><a href="#" class="btn">Proje 3</a></li>
                     </ul>
                   </div>
                 </li>
@@ -73,6 +73,14 @@
 
         $("#projeler").click(function(){
             $(".proje").toggle()
+        })
+        $("#projeler").hover(function(){
+            $(".proje").show()
+            
+        })
+        $("body").hover(function(){
+            $(".proje").hide("fast")
+            
         })
      })
     
