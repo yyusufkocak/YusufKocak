@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="main-header">
+            <div class="main-header-body">
+                <div class="main-header-title">
+                    <a href="index.html">
+                        <h1>Wissen Akademie</h1>
+                    </a>
+                </div>
+                <nav class="main-header-nav">
+                    <ul class="main-header-nav__list">
+                        <li class="main-header-nav__list-item"><a href="index.html" class="btn">ANA SAYFA</a></li>
+                        <li class="main-header-nav__list-item"><a href="index.html #html" class="btn ">HTML</a></li>
+                        <li class="main-header-nav__list-item"><a href="#" class="btn btnCss">CSS</a></li>
+                        <li class="main-header-nav__list-item"><a href="index.html #bootstrap" class="btn">BOOTSTRAP</a>
+                        </li>
+                        <li class="main-header-nav__list-item"><a href="index.html #javascript"
+                                class="btn">JAVASCRIPT</a></li>
+                        <li class="main-header-nav__list-item"><a href="index.html #jquery" class="btn">JQUERY</a></li>
+                        <li class="main-header-nav__list-item"><a href="index.html #hakkimiz" class="btn">HAKKIMIZDA</a>
+                        </li>
+                        <li class="main-header-nav__list-item"><a href="index.html #iletisim" class="btn">İLETİŞİM</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="main-section">
+            <div class="main-section-body">
+                <div class="main-contents">
+                    <div class="main-content" id="css">
+                        <div class="main-content-title">
+                            <h2>CSS</h2>
+                        </div>
+                        <div class="main-content-text">
+                            <h1 style="color: orange;">Flexbox Nedir?</h1>
+                            <p style="font-size: 20px; font-weight: bold;">
+                                
+
+                                flex-direction = alt alta sıralayabiliriz
+                                flex-wrap = flex containerı küçülttüğümüzde içindeki elemanlarında buna göre alt alta
+                                geçmesini bu özellik ile yapabiliriz
+                                justify-content = yataydaki hizalamak istersek örneğin bütün elemanları ortada sağda
+                                veya solda sıralamak istersek bunu kullancağız
+                                align-items = dikeyde hizalamak için kullanacağız
+                                align-content = birden fazla satır olduğunda aradaki mesafeyi ayarlamak için kullanırız
+
+                                <br><br><br>
+
+                                align-self = flex itemlerı tek tek konumu ayarlayabiliriz
+                                order ? flex itemleri tek tek sıralamak istersek kullanırız
+                                flex-grow = container büyüdüğünde flex itemların ne oranda büyüyüeceğini ayarlarız
+                                flex-shrink = container küçüldüğünde flex itemların ne oranda küçülüceğini ayarlarız
+                                flex-basis = her bir elemanın başlangıçta genişlik özelliğini ayarlarız
+
+                                flex:0 1 auto; hepsini içeren özellik
+
+                                <br><br><br>
+                                ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                <br><br><br>
+                                flex-direction
+
+                                flex-direction:row varsayılan olaran bu gelir yatayda hizalanır ve hizanladığı zaman
+                                elemanlar inline-block gibi davranır yani içerik kadar yer kaplarla
+                                flex-direction:column eğerki blok elemanlarsa yine genişlikleri kadar alan kaplarlar ve
+                                yine blok eleman gibi davranmaya devam ederler
+                                flex-direction:row-reverse tersten hizalama
+                                flex-direction:column-reverse
+                                <br><br><br>
+                                flex-wrap
+
+                                flex-wrap:nowrap varsayılan değerdir yani tarayıcıyı küçülttüğümüzde sığmayan elemanlar
+                                aşağıya geçmek yerine aşağıda scrollbar çıkar ve onu hareket ettirerek sığmayan
+                                elemanları sağda veya solda görmeye devam ederiz
+                                flex-wrap:wrap sığmayan değerler aşağıya geçer responsive tasarımlar için kullanılabilir
+                                flex-wrap:wrap-reverse sığmayan elemanlar alta değil üst tarafa geçer yani tam tersi
+                                olur
+                                <br><br><br>
+                                flex-flow:row wrap
+                                bu özelliği hem flex-direction için hem de flex-wrap için kullanabileceğimiz tek bir
+                                özellik gibi düşünebiliriz
+                                <br><br><br>
+                                justify-content
+
+                                justify-content:center ortada hizalar
+                                justify-content:flex-start başta hizalar
+                                justify-content:flex-end soda hizalar
+                                justify-content:space-around aralarında belirli boşluk bırakarak sayfanın containerın
+                                bütününe sıralar en sağ ve en soldan 1 birim aralarda ise 2 birim boşluk bırakarak
+                                sıralama yapılır
+                                justify-content:space-between en sağ ve en solda boşluk bırakılmaz oonun yerine boşluk
+                                eşit olarak bütüne paylaştırılır
+                                justify-content:evenly en sağ ve en solda olmak üzere bütün boşluklar eşit bırakılır
+                                <br><br><br>
+                                (stretch detaylı araştırılacak)align-items:stretch containerın uzunluğu neyse ona göre
+                                uzunluk alınarak sıralanır dikeydeki hizalamada değişikliği göremeyiz varsayılan
+                                özelliktir
+                                align-items:flex-start satırın en üstüne gelir
+                                align-items:flex-end satırın en sonuna gelir
+                                align-items:center elemanlar tam ortaya gelmiş olur
+                                <br><br><br>
+                                flex-direction:column yaptığımızda normalde yatayda yaptığımız her şeyi bu sefer dikeyde
+                                yaparız ve dikeyde yaptıklarımızıda yatayda yapmış oluruz bunu karıştırmamak için ilgili
+                                nesneyi tam tersi çevirip sağ ve sol tarafını sanki yataydaymış gibi görebiliriz aynı
+                                şeyler align-items içinde geçerlidir
+                                <br><br><br>
+                                align-self
+
+                                align-self:flex-start diyerek sadece ilgili elemanı satırın en yukarısında
+                                sıralayabiliriz
+                                align-self:flex-end diyerek sadece ilgili elemanı satırın en altında sıralayabiliriz
+                                align-self:flex-center diyerek sadece ilgili elemanı ortada sıralarız
+                                <br><br><br>
+                                flex-grow
+
+                                flex-grow:0 varsayılan özelliği sıfırdır
+                                flex-grow:1 uygulanan eleman hangisi ise genişlik olarak içeriği olduğu gibi kaplar ve
+                                birden fazla elemana uygulanmışsa içeriği eşit bir şekilde pay edip kaplarlar
+                                iki tane eleman var diyelim bunlardan birine 2 diğerinede 1 değerini verirsek bu
+                                elemanların containerda kapladıkları alanlar 2ye 1 oranında değişir
+                                <br><br><br>
+                                flex-basis
+
+                                flex-basis:200px genişlik özelliği ilgili elemana uygulanır ve 200pxden geri kalan alan
+                                grow ile verdiğimiz veya vermediğiniz elemanlar tarafından paylaşılır
+                                <br><br><br>
+                                flex-shrink
+                                
+                                flex-shrink:1 varsayılan değeridir ilgili eleman sayfa küçüldüğünde ve yer kalmadığında
+                                o da küçülmeye devam eder
+                                flex-shrink:0 flex-basisde 200px verdiğimiz elemanın eğer ki sayfa küçüldüğündede değeri
+                                sabit kalsak istiyorsak bunu kullanacağız ve değer sığmadığında scrollbar çıkar ve o
+                                sayede ilgili elemanı görmeye devam edebiliriz
+                                <br><br><br>
+                                flex:0 1 200px; diyerek grow shrink basis özelliklerinin hepisini tek satırda
+                                verebiliriz
+                                flex:25% ilgili satırın yüzde yirmi beşi diyerek değer verme yapabiliriz
+                                <br><br><br>
+                                order   
+
+                                normalde elemanlar ekleniliş sırasına göre ilgili containerda yer alır fakar biz ilgili
+                                elemana order:-1 dersek veya kaç tane nesne varsa sıralamayı ona göre sıralama
+                                başlatırsak bu durumda sıralama verdiğimiz değere göre yapılır.
+                                <br><br><br>
+                                align-content
+
+                                align-content:center diyelim ki flex-wrap:wrap yaptık ve ilgili elemanlar ikinci sıraya
+                                düştü veya üç,artık buradaki elemanlar her bir satırda kendisini dikeyde bulunduğu
+                                satıra göre ortalıcak fakat biz bu elemanlar dikeyde boyut ne kadarsa ortalamayı ona
+                                göre yapmak istiyorsak o zaman align-content:center özelliğinden yararlanırız
+                                align-content:flex-start en üstte ve sanki dikeyde tek bir satırda ortalanmış gibi üst
+                                tarafa gelir
+                                align-content:flex-end en altta ve sanki dikeyde tek bir satırda ortalanmış gibi altta
+                                tarafa gelir
+                                align-content:space-around dikeyde ortalarda 2 birim ve köşelerde 1 birim olarak
+                                aralarda boşluk bırakır
+                                align-content:space-between bütün boşluğu araya verir
+                                align-content:space-evenly bütün boşlukları eşit olarak paylaştırır
+                                <br><br><br>
+                                gap
+
+                                gap:30px ilgili containerda yanyana aldığımız nesnelerin arasında hem alttan,üstten
+                                hemde sağdan,soldan 30px boşluk bırakır
+                                row-gap:20px bu işi sadece satır bazında yapar
+                                column-gap:20px bu işi sadece sütunbazında yapar
+                                <br><br><br>
+                            </p>
+                            <h1 style="color: darkred;">Bu Bölüm Daha Sonrasında Resimler Ve Görsellik Açısından Güncellenecektir</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <h1>Her Hakkı Saklıdır.</h1>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $(".btnCss").addClass("btnActive")
+            $(".btn").click(function () {
+                $(".btn").removeClass("btnActive")
+                $(this).addClass("btnActive")
+                window.location.href = 'index.html';
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>
