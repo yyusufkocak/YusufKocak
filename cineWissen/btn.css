@@ -1,0 +1,91 @@
+.lbtn{
+    border: #30336b;
+    background-color: white;
+    color: #30336b;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .8s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 1px;
+    
+}
+
+.lbtn:hover{
+    background-color: #ecf0f1;
+    color: #130f40;
+}
+.lbtnActive{
+    
+    background-color: #30336b;
+    color: white;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .8s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 1px;
+    
+}
+.lbtnActive:hover{
+    background-color: #130f40;
+    color: white;
+    
+}
+.lbtn:hover{
+
+}
+.lbtn-register{
+    background: rgb(104,109,224);
+    background: linear-gradient(to left, rgba(104,109,224,1) 0%, rgba(72,52,212,1) 35%);
+    color: white;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 1s ease;
+    box-shadow: rgba(0, 0, 0, 0.50) 0px 5px 15px;
+    border-radius: 5px;
+}
+.lbtn-register:hover{
+    background: rgba(72,52,212,1);
+    background: linear-gradient(to left, rgba(104,109,224,1) 0%, rgba(72,52,212,1) 1%);   
+    color: white; 
+    
+}
+.lbtn-login{
+    background-color: white;
+    color: #30336b;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .8s ease;
+    box-shadow: rgba(0, 0, 0, 0.50) 0px 5px 15px;
+    border-radius: 5px;
+}
+.lbtn-login:hover{
+    background-color: #ecf0f1;
+    color: #30336b;
+}
+.cbtn {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 7px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    transition-duration: .6s
+}
+
+.cbtn-trail {
+    background: #FC997C;
+    color: #fff;
+    border: 2px solid #FC997C;
+}
+
+.cbtn-trail:hover {
+    background: #fff;
+    color: #FC997C;
+    border: 2px solid #FC997C;
+}
