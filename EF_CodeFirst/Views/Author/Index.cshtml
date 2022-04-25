@@ -1,0 +1,36 @@
+@model List<Author>
+@{
+    ViewData["Title"] = "Index";
+}
+<h5>Authors</h5>
+<hr>
+<a asp-action="Create" class="btn btn-primary">New Author</a>
+<a asp-action="GetDeletedAuthors" class="btn btn-primary">Deleted Authors</a>
+<hr>
+<table class="table table-sm table-dark w-50">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Author Name</th>
+            <th>Author Surname</th>
+            <th>Author Date Of Birth</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var author in Model)
+        {
+            <tr>
+                <td>@author.AuthorId</td>
+                <td>@author.AuthorName</td>
+                <td>@author.AuthorSurname</td>
+                <td>@author.AuthorDateOfBirth</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@author.AuthorId" class="btn btn-sm btn-primary">Details</a>
+                    <a asp-action="Edit" asp-route-id="@author.AuthorId" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@author.AuthorId" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

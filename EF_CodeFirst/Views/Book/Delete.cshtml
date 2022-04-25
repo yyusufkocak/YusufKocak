@@ -1,0 +1,22 @@
+@model Book
+@{
+    ViewData["Title"] = "Delete";
+}
+<h5>Delete Book</h5>
+<hr>
+Book Id: @Model.BookId
+<br>
+Book Name: @Model.BookName
+<br>
+Book Number Of Pages: @Model.BookNumberOfPages
+<br>
+Book Quantity: @Model.BookQuantity
+<br>
+Book Year Of Publication: @Model.BookYearOfPublication
+<br>
+Book Edition Number: @Model.BookEditionNumber
+<br>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="BookId">
+    <input type="submit" class="btn btn-danger" value="Delete">
+</form>

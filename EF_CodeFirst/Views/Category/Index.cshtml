@@ -1,0 +1,32 @@
+@model List<Category>
+@{
+    ViewData["Title"] = "Index";
+}
+<h5>Categories</h5>
+<hr>
+<a asp-action="Create" class="btn btn-primary">New Category</a>
+<a asp-action="GetDeletedCategories" class="btn btn-primary">Deleted Categories</a>
+<hr>
+<table class="table table-sm table-dark w-50">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Category Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Model)
+        {
+            <tr>
+                <td>@category.CategoryId</td>
+                <td>@category.CategoryName</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@category.CategoryId" class="btn btn-sm btn-primary">Details</a>
+                    <a asp-action="Edit" asp-route-id="@category.CategoryId" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@category.CategoryId" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

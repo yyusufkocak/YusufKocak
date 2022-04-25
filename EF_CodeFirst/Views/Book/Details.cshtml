@@ -1,0 +1,45 @@
+@model Book
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Book Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BookName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookName)
+        </dd>
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BookNumberOfPages)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookNumberOfPages)
+        </dd>
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BookQuantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookQuantity)
+        </dd>
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BookYearOfPublication)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookYearOfPublication)
+        </dd>
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BookEditionNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookEditionNumber)
+        </dd>
+    </dl>
+</div>
+<a class="btn btn-info" asp-action="Index">Back to Books</a>

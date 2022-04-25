@@ -1,0 +1,18 @@
+@model Author
+@{
+    ViewData["Title"] = "Edit";
+}
+<h5>Edit Author</h5>
+<hr>
+<form asp-action="Edit">
+    <label>ID:</label>
+    <label asp-for="AuthorId">@Model.AuthorId</label>
+    <input type="hidden" asp-for="AuthorId">
+    <label>Author Name:</label>
+    <input type="text" asp-for="AuthorName">
+    <label>Author Surname:</label>
+    <input type="text" asp-for="AuthorSurname">
+    <label>Author Date Of Birth</label>
+    <input type="text" asp-for="AuthorDateOfBirth">
+    <input type="submit" value="Save Changes">
+</form>

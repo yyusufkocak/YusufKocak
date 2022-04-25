@@ -1,0 +1,22 @@
+@model Book
+@{
+    ViewData["Title"] = "Edit";
+}
+<h5>Edit Book</h5>
+<hr>
+<form asp-action="Edit">
+    <label>ID:</label>
+    <label asp-for="BookId">@Model.BookId</label>
+    <input type="hidden" asp-for="BookId">
+    <label>Book Name:</label>
+    <input type="text" asp-for="BookName">
+    <label>Book Number Of Pages:</label>
+    <input type="text" asp-for="BookNumberOfPages">
+     <label>Book Quantity:</label>
+    <input type="text" asp-for="BookQuantity">
+     <label>Book Year Of Publication:</label>
+    <input type="text" asp-for="BookYearOfPublication">
+     <label>Book Edition Number:</label>
+    <input type="text" asp-for="BookEditionNumber">
+    <input type="submit" value="Save Changes">
+</form>
