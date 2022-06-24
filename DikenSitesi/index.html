@@ -1,344 +1,887 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <title>Document</title>
-        <style>
-            .container {
-                width: 83%;
-                margin: auto auto 10px;
-                border: 1px solid lightgray;
-                /* height: 100vh; */
 
-            }
-            .btn {
-                font-weight: bold;
-                font-size: 16px;
-                padding: 20px 18px;
-                color: black;
-                border-right: 1px solid lightgray;
-                transition: 0.1s ease;
-            }
-            .btn:hover {
-                background-color: black;
-                color: white;
-            }
-            .main-nav {
-                padding-top: 3px;
-                height: 52px;
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Yaramazlar Biraz Batar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-            }
-            .main-nav__items {
-                list-style-type: none;
-                float: left;
-                padding: 0;
-            }
-            .main-nav__items:after {
-                content: "";
-                display: block;
-                clear: both;
-            }
-            .main-nav__item {
-                float: left;
-            }
-            .main-nav__item:after {
-                content: "";
-                display: block;
-                clear: both;
-            }
-            .main-nav__item a {
-                text-decoration: none;
-            }
-            .img-logo {
-                background: url("diken.PNG");
-                height: 90px;
-                margin-top: 15px;
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
 
-            }
-            .line {
-                border-top: 1px solid lightgray;
-                margin-top: 15px;
-            }
-            .title-box {
-                display: inline-block;
-                width: 348px;
-                background: lightgray;
+        .page-container {
+            width: 85%;
+            margin: auto;
+            border: 1px solid #e3e3e3;
+            height: auto;
+        }
 
-            }
-            .mainbox-img {
-                height: 180px;
-            }
-            .mainbox-1-body {
-                display: flex;
-                flex-direction: column;
-                width: 50%;
-            }
-            .mainbox-1 {
-                width: 348px;
+        header {
+            width: 100%;
 
-            }
-            .mainbox-1::after {
-                content: "";
-                display: block;
-                border-top: 1px solid lightgray;
-            }
-            .mainbox-1 a {
-                text-decoration: none;
-                color: black;
-                transition: 0.2s ease;
-            }
-            .mainbox-1 a:hover {
-                color: orange;
-            }
-            .main-content {
-                width: 67%;
-                display: flex;
-                flex-direction: row;
-            }
-            .line-height {
-                height: auto;
-                margin-right: 15px;
-                border-right: 1px solid lightgray;
-            }
-            .fa-rss{
-                background-color: orangered;
-                color: white;
-                font-size: 23px;
-                
-                padding: 5px;
-                
-            }
-            .fa-facebook,.fa-twitter,.fa-instagram,.fa-pinterest{
-                font-size: 35px;
-                color: white;
-               
-            }
-            .fa-facebook{
-                background-color: rgba(66 103 178);
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <header id="main-header">
-                <nav class="main-nav">
-                    <ul class="main-nav__items">
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">ROTA</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">9 SORUDA</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">DİKEN ÖZEL</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">GÜNÜN 11'I</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">DİKENLİK</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">AKŞAM POSTASI</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">VPN HABER</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">ENGLISH</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="img-logo"></div>
-                <nav class="main-nav">
-                    <ul class="main-nav__items">
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">ROTA</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">9 SORUDA</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">DİKEN ÖZEL</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">GÜNÜN 11'I</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">DİKENLİK</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">AKŞAM POSTASI</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">VPN HABER</a>
-                        </li>
-                        <li class="main-nav__item">
-                            <a href="#" class="btn">ENGLISH</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="line"></div>
-            </header>
-            <main>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="modaSahnesi.jpg"
-                            class="d-block w-100" alt="...">
+        }
+
+        .header-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .header-nav li {
+            display: flex;
+        }
+
+        .header-nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 17px;
+            border-right: 1px solid #e3e3e3;
+            padding: 17px;
+            transition: .3s ease;
+        }
+
+        .header-nav::after {
+            content: "";
+            display: block;
+            border-top: 1px solid #e3e3e3;
+            width: 100%;
+        }
+
+        .page-line {
+            width: 100%;
+            border-top: 1px solid #e3e3e3;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header-nav a:hover {
+            color: white;
+            background-color: black;
+        }
+
+        .page-banner {
+            background-image: url("img/diken.PNG");
+            background-size: cover;
+            height: 100px;
+            width: 100%;
+        }
+
+        .page-cards {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+        }
+
+        .page-card {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .page-card img {
+            width: 100%;
+        }
+
+        .page-card::after {
+            content: "";
+            display: block;
+            border-top: 1px solid #e3e3e3;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .page-title {
+            background-color: #e3e3e3;
+            width: 90%;
+            margin: auto;
+            margin-bottom: 15px;
+            padding: 5px 2px;
+            margin-top: 20px;
+        }
+
+        .main-aside .icon-box {
+            margin-top: -15px;
+            padding-left: 4px;
+        }
+
+        .main-container {
+            display: flex;
+            width: 70%;
+        }
+
+        .height-line {
+            border-right: 1px solid #e3e3e3;
+
+        }
+
+        .main-footer-container {
+            width: 70%;
+            border-right: 1px solid #e3e3e3;
+        }
+
+        .main-footer-container img {
+            width: 306px;
+            height: 160px;
+        }
+
+        .page-footer-card {
+            display: flex;
+            flex-wrap: wrap;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .page-footer-card img {
+            width: 306px;
+            height: 160px;
+        }
+
+        .page-footer-card-text {
+            width: 50%;
+            padding-left: 20px;
+            flex: 1 0 50%;
+        }
+
+        .page-footer-card-text p {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .page-footer-card::after {
+            content: "";
+            width: 100%;
+            border-top: 1px solid #e3e3e3;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .page-footer-title {
+            background-color: #e3e3e3;
+            width: 95%;
+            margin: auto;
+            margin-bottom: 15px;
+            padding: 5px 2px;
+        }
+
+        /* ikinci main-footer kısmı */
+        .page-footer-card-s {
+            display: flex;
+            flex-wrap: wrap;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .page-footer-card-s img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .page-footer-card-text-s {
+            width: 75%;
+            padding-left: 20px;
+            flex: 1 0 50%;
+        }
+
+        .page-footer-card-text-s p {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .page-footer-card-s::after {
+            content: "";
+            width: 100%;
+            border-top: 1px solid #e3e3e3;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .page-footer-title-s {
+            background-color: #e3e3e3;
+            width: 95%;
+            margin: auto;
+            margin-bottom: 15px;
+            padding: 5px 2px;
+        }
+
+        /* bitişi */
+        .main-header-container {
+            display: flex;
+            flex-flow: column wrap;
+            height: 66.3vh;
+        }
+
+        .main-header-slider {
+            background: #f3f3f3;
+            width: 70%;
+            text-align: center;
+            padding: 2px 20px;
+            border-right: 1px solid #e3e3e3;
+            border-bottom: 1px solid #e3e3e3;
+        }
+
+
+        .main-header-slider img {
+            margin: 18px 0;
+            width: 100%;
+
+        }
+
+        .main-aside {
+            width: 30%;
+        }
+
+        .aside-m {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .aside-m::after {
+            content: "";
+            width: 100%;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e3e3e3;
+        }
+
+        .aside-img {
+            width: 30%;
+        }
+
+        .aside-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .aside-text {
+            width: 70%;
+            padding-left: 30px;
+        }
+
+        .aside-t {
+            width: 90%;
+            margin: auto;
+        }
+
+        .aside-t:after {
+            content: "";
+            width: 100%;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e3e3e3;
+        }
+
+        .fa-facebook-f {
+            color: white;
+            background-color: rgb(24, 119, 242);
+        }
+
+        .fa-twitter {
+            color: white;
+            background: #1DA1F2;
+        }
+
+        .fa-instagram-square {
+            color: #E1306C;
+            background: white;
+        }
+
+        .fa-pinterest-p {
+            color: white;
+            background: #E60023;
+        }
+
+        .fa-square-rss {
+            color: rgb(227, 112, 45);
+            background-color: white;
+        }
+
+        .fa-facebook-f,
+        .fa-twitter,
+        .fa-pinterest-p,
+        .fa-square-rss {
+            width: 30px;
+            height: 30px;
+            font-size: 23px;
+            text-align: center;
+            padding-top: 3px;
+            border-radius: 5px;
+        }
+
+        .fa-instagram-square,
+        .fa-square-rss {
+            font-size: 35px;
+            margin: 0;
+            position: relative;
+            transform: translate(0, 15%);
+
+        }
+
+        .icon-box {
+            width: 90%;
+            margin: auto;
+            position: relative;
+        }
+
+        .fa-brands:hover,
+        .fa-solid:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        footer {
+            background: black;
+
+        }
+
+        .footer-sides {
+            display: flex;
+            padding: 40px;
+        }
+
+        .footer-note {
+            color: #999999;
+            padding: 20px 40px 30px 40px;
+            text-align: center;
+        }
+
+        footer h2 {
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-right: 25px;
+            transition: .3s ease;
+        }
+
+        footer h2:hover {
+            cursor: pointer;
+            color: orange;
+        }
+
+
+        .icon-box2 i {
+            height: auto;
+            width: 25% !important;
+            background: #999999;
+            text-align: center;
+            color: white;
+            font-size: 13px;
+            padding: 8px 0;
+            margin-bottom: 10px;
+            margin-right: 4px;
+            border-radius: 4px !important;
+            transition: .3s ease;
+        }
+
+        .icon-box2 i:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        #slider {
+            margin: 10px auto;
+            /* width: 600px;
+            height: 300px; */
+            position: relative;
+            overflow: hidden !important;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-container">
+        <header>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#">ROTA</a></li>
+                    <li><a href="#">9 SORUDA</a></li>
+                    <li><a href="#">DİKEN ÖZEL</a></li>
+                    <li><a href="#">GÜNÜN 11'i</a></li>
+                    <li><a href="#">DİKENLİK</a></li>
+                    <li><a href="#">AKŞAM POSTASI</a></li>
+                    <li><a href="#">VPN HABER</a></li>
+                    <li><a href="#">ENGLISH</a></li>
+                </ul>
+            </nav>
+            <div class="page-banner"></div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#">VİTRİN</a></li>
+                    <li><a href="#">AKTÜEL</a></li>
+                    <li><a href="#">EKONOMİ</a></li>
+                    <li><a href="#">ANALİZ</a></li>
+                    <li><a href="#">DÜNYA</a></li>
+                    <li><a href="#">MEDYA</a></li>
+                    <li><a href="#">KEYİF</a></li>
+                    <li><a href="#">AGORA</a></li>
+                    <li><a href="#">SANAT</a></li>
+                    <li><a href="#">SÜRDÜREBİLİRLİK</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="main-header-container">
+                <div class="main-header-slider">
+                    <div class="slide">
+                        <img src="https://picsum.photos/id/103/800/380" alt="">
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://www.diken.com.tr/wp-content/uploads/2022/04/20220409-aricilik-ikizdere-sb-737x400.jpg"
-                            class="d-block w-100" alt="...">
+                    <div class="slide">
+                        <img src="https://picsum.photos/id/104/800/380" alt="">
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://www.diken.com.tr/wp-content/uploads/2022/03/20220328-rock-smith-tokat-reuters-737x400.jpg"
-                            class="d-block w-100" alt="...">
+                    <div class="slide">
+                        <img src="https://picsum.photos/id/102/800/380" alt="">
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://www.diken.com.tr/wp-content/uploads/2021/12/20211207-viagra-reuters-sb-737x400.jpg"
-                            class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://www.diken.com.tr/wp-content/uploads/2022/04/20220409-akbil-SB-737x400.jpg"
-                            class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://www.diken.com.tr/wp-content/uploads/2022/04/20220409-thodex-Diken-SB-737x400.jpg"
-                            class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://www.diken.com.tr/wp-content/uploads/2021/07/20210719-antalya-rus-turist-sb-737x400.jpg"
-                            class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://www.diken.com.tr/wp-content/uploads/2021/04/gunun-ozeti-yeni-737x400.jpg"
-                            class="d-block w-100" alt="...">
+                    <a id="prevSlide">&#10094</a>
+                    <a id="nextSlide">&#10095</a>
+                    <div id="dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
                 </div>
-                <div class="main-content">
-                    <div class="mainbox-1-body">
-                        <h2 class="title-box">Aktüel</h2>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="line-height"></div>
-                    <div class="mainbox-1-body">
-                        <h2 class="title-box">DİKEN ÖZEL</h2>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                        <div class="mainbox-1">
-                            <img src="modaSahnesi.jpg" class="mainbox-img">
-                            <a href="">
-                                <h5>Moda Sahnesi ışıksız oyun sahnelemeye son verdi: Elektriğimizi açtık</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-side">
-                    <h2 class="title-box">Aktüel</h2>
+                <div class="main-aside">
+                    <h2 class="page-title">DİKEN’İ TAKİP EDİN</h2>
                     <div class="icon-box">
-                        <i class="fab fa-facebook"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-pinterest"></i>
-                        <i class="fa-solid fa-rss"></i>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram-square"></i>
+                        <i class="fa-brands fa-pinterest-p"></i>
+                        <i class="fa-solid fa-square-rss"></i>
+                    </div>
+
+                    <div class="page-line"></div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-line"></div>
+                    <div>
+                        <h2 class="page-title">AGORA</h2>
+                    </div>
+                    <div class="aside-m">
+                        <div class="aside-img">
+                            <img src="img/haber.PNG">
+                        </div>
+                        <h3 class="aside-text">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="aside-m">
+                        <div class="aside-img">
+                            <img src="img/haber.PNG">
+                        </div>
+                        <h3 class="aside-text">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="aside-m">
+                        <div class="aside-img">
+                            <img src="img/haber.PNG">
+                        </div>
+                        <h3 class="aside-text">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="aside-m">
+                        <div class="aside-img">
+                            <img src="img/haber.PNG">
+                        </div>
+                        <h3 class="aside-text">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="aside-m">
+                        <div class="aside-img">
+                            <img src="img/haber.PNG">
+                        </div>
+                        <h3 class="aside-text">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="aside-m">
+                        <div class="aside-img">
+                            <img src="img/haber.PNG">
+                        </div>
+                        <h3 class="aside-text">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="aside-m">
+                        <div class="aside-img">
+                            <img src="img/haber.PNG">
+                        </div>
+                        <h3 class="aside-text">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div>
+                        <h2 class="page-title">GÜNÜN 11’İ</h2>
+                    </div>
+                    <div class="aside-t">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut!</h3>
+                    </div>
+                    <div class="aside-t">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut!</h3>
+                    </div>
+                    <div class="aside-t">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut!</h3>
+                    </div>
+                    <div class="aside-t">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut!</h3>
+                    </div>
+                    <div class="aside-t">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut!</h3>
+                    </div>
+                    <div class="aside-t">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut!</h3>
+                    </div>
+                    <div class="aside-t">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut!</h3>
+                    </div>
+                    <div class="aside-t">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut!</h3>
+                    </div>
+                    <div class="aside-t">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut!</h3>
+                    </div>
+                    <div class="aside-t">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut!</h3>
+                    </div>
+                    <div class="aside-t">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut!</h3>
+                    </div>
+                    <div class="page-line"></div>
+                </div>
+            </div>
+            <div class="main-container">
+                <div class="page-cards">
+                    <div>
+                        <h2 class="page-title">AKTÜEL</h2>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div>
+                        <h2 class="page-title">SANAT</h2>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div>
+                        <h2 class="page-title">MEDYA</h2>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
                     </div>
                 </div>
-            </main>
-        </div>
+                <div class="height-line"></div>
+                <div class="page-cards">
 
-    </body>
-</html></div></body></html>
+                    <div>
+                        <h2 class="page-title">DİKEN ÖZEL</h2>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div>
+                        <h2 class="page-title">DÜNYA</h2>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div>
+                        <h2 class="page-title">KEYİF</h2>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+
+                    <div class="page-card">
+                        <img src="img/haber.PNG" alt="">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    </div>
+                </div>
+                <div class="height-line"></div>
+            </div>
+            <div class="main-footer-container">
+                <div class="page-footer-cards">
+                    <div>
+                        <h2 class="page-footer-title">SÜRDÜRÜLEBİLİRLİK</h2>
+                    </div>
+                    <div class="page-footer-card">
+                        <img src="img/haber.PNG" alt="">
+                        <div class="page-footer-card-text">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita earum id
+                                ipsa ullam dolorem odio itaque nemo nesciunt laboriosam. Lorem, ipsum dolor sit amet
+                                consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                    <div class="page-footer-card">
+                        <img src="img/haber.PNG" alt="">
+                        <div class="page-footer-card-text">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita earum id
+                                ipsa ullam dolorem odio itaque nemo nesciunt laboriosam. Lorem, ipsum dolor sit amet
+                                consectetur adipisicing.</p>
+                        </div>
+
+                    </div>
+                    <div class="page-footer-card">
+                        <img src="img/haber.PNG" alt="">
+                        <div class="page-footer-card-text">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita earum id
+                                ipsa ullam dolorem odio itaque nemo nesciunt laboriosam. Lorem, ipsum dolor sit amet
+                                consectetur adipisicing.</p>
+                        </div>
+
+                    </div>
+                    <div class="page-footer-card">
+                        <img src="img/haber.PNG" alt="">
+                        <div class="page-footer-card-text">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita earum id
+                                ipsa ullam dolorem odio itaque nemo nesciunt laboriosam. Lorem, ipsum dolor sit amet
+                                consectetur adipisicing.</p>
+                        </div>
+
+                    </div>
+                    <div class="page-footer-card">
+                        <img src="img/haber.PNG" alt="">
+                        <div class="page-footer-card-text">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita earum id
+                                ipsa ullam dolorem odio itaque nemo nesciunt laboriosam. Lorem, ipsum dolor sit amet
+                                consectetur adipisicing.</p>
+                        </div>
+
+                    </div>
+                    <div class="page-footer-card">
+                        <img src="img/haber.PNG" alt="">
+                        <div class="page-footer-card-text">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita earum id
+                                ipsa ullam dolorem odio itaque nemo nesciunt laboriosam. Lorem, ipsum dolor sit amet
+                                consectetur adipisicing.</p>
+                        </div>
+
+                    </div>
+                    <div class="page-footer-card">
+                        <img src="img/haber.PNG" alt="">
+                        <div class="page-footer-card-text">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita earum id
+                                ipsa ullam dolorem odio itaque nemo nesciunt laboriosam. Lorem, ipsum dolor sit amet
+                                consectetur adipisicing.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="main-footer-container">
+                <div class="page-footer-cards">
+                    <div>
+                        <h2 class="page-footer-title">DİKEN’E TAKILANLAR</h2>
+                    </div>
+                    <div class="page-footer-card-s">
+                        <img src="img/haber.PNG" alt="">
+                        <div class="page-footer-card-text-s">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita earum id
+                                ipsa ullam dolorem odio itaque nemo nesciunt laboriosam. Lorem, ipsum dolor sit amet
+                                consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                    <div class="page-footer-card-s">
+                        <img src="img/haber.PNG" alt="">
+                        <div class="page-footer-card-text-s">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita earum id
+                                ipsa ullam dolorem odio itaque nemo nesciunt laboriosam. Lorem, ipsum dolor sit amet
+                                consectetur adipisicing.</p>
+                        </div>
+
+                    </div>
+                    <div class="page-footer-card-s">
+                        <img src="img/haber.PNG" alt="">
+                        <div class="page-footer-card-text-s">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita earum id
+                                ipsa ullam dolorem odio itaque nemo nesciunt laboriosam. Lorem, ipsum dolor sit amet
+                                consectetur adipisicing.</p>
+                        </div>
+
+                    </div>
+                    <div class="page-footer-card-s">
+                        <img src="img/haber.PNG" alt="">
+                        <div class="page-footer-card-text-s">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita earum id
+                                ipsa ullam dolorem odio itaque nemo nesciunt laboriosam. Lorem, ipsum dolor sit amet
+                                consectetur adipisicing.</p>
+                        </div>
+
+                    </div>
+                    <div class="page-footer-card-s">
+                        <img src="img/haber.PNG" alt="">
+                        <div class="page-footer-card-text-s">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita earum id
+                                ipsa ullam dolorem odio itaque nemo nesciunt laboriosam. Lorem, ipsum dolor sit amet
+                                consectetur adipisicing.</p>
+                        </div>
+
+                    </div>
+                    <div class="page-footer-card-s">
+                        <img src="img/haber.PNG" alt="">
+                        <div class="page-footer-card-text-s">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita earum id
+                                ipsa ullam dolorem odio itaque nemo nesciunt laboriosam. Lorem, ipsum dolor sit amet
+                                consectetur adipisicing.</p>
+                        </div>
+
+                    </div>
+                    <div class="page-footer-card-s">
+                        <img src="img/haber.PNG" alt="">
+                        <div class="page-footer-card-text-s">
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ducimus?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus expedita earum id
+                                ipsa ullam dolorem odio itaque nemo nesciunt laboriosam. Lorem, ipsum dolor sit amet
+                                consectetur adipisicing.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-sides">
+                <div class="side-1">
+                    <h2>VİTRİN</h2>
+                    <h2>AKTÜEL</h2>
+                    <h2>EKONOMİ</h2>
+                    <h2>ANALİZ</h2>
+                    <h2>DÜNYA</h2>
+                    <h2>MEDYA</h2>
+                    <h2>KEYİF</h2>
+                    <h2>AGORA</h2>
+                    <h2>SANAT</h2>
+                    <h2>SÜRDÜRÜLEBİLİRLİK</h2>
+                </div>
+                <div class="side-2">
+                    <H2>AGORA</H2>
+                    <H2>DİKEN'E TAKILANLAR</H2>
+                    <H2>BİRİNCİ SAYFALAR</H2>
+                    <H2>GÜNÜN 11'İ</H2>
+                    <H2>AKŞAM POSTASI</H2>
+                </div>
+                <div class="side-3">
+                    <h2>BU GAZETE...</h2>
+                    <h2>DİKEN 5 YAŞINDA</h2>
+                    <h2>KÜNYE</h2>
+                    <h2>İLETİŞİM</h2>
+                </div>
+                <div class="icon-box2">
+                    <i class="fa-regular fa-envelope"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-google-plus-g"></i>
+                    <i class="fa-brands fa-pinterest-p"></i>
+                    <i class="fa fa-rss"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-vimeo-v"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+            <div class="page-line" style="border-color: #333;"></div>
+            <h5 class="footer-note">
+                "Genç gazeteci arkadaşlarıma! Bu meslek yorucu bir meslektir. Ama, insan büyük bir zevkle çalışır.
+                Kalemine daima efendi kal, uşak olmamaya gayret et. Mecbur kalırsan kır, sakın satma." Sedat Simavi
+            </h5>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
