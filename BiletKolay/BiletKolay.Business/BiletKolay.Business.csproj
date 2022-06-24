@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BiletKolay.Data\BiletKolay.Data.csproj" />
+    <ProjectReference Include="..\BiletKolay.Entity\BiletKolay.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

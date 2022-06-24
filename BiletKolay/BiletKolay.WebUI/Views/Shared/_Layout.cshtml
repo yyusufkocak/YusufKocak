@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/utils.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="home" class="main-header">
+        <div class="navbar">
+            <h1 class="brand">
+                <span id="brand-icon" class="material-symbols-outlined">
+                    my_location
+                </span>
+                <span>Bilet Kolay</span>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Rezervasyon</a></li>
+                    <li><a href="#turlar">Turlar</a></li>
+                    <li><a href="#rooms">Satış Ofislerimiz</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="login-content">
+                <li><a href="#">Üye Girişi</a></li>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="footer bg-light">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <p>Copyright &copy 2022 - Bilet Kolay</p>
+    </footer>
+</body>
+
+</html>

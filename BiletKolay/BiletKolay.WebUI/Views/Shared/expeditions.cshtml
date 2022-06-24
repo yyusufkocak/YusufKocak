@@ -1,0 +1,23 @@
+﻿@model BiletKolay.Entity.Route
+
+
+<div class="card-main">
+    <div class="card-ticket">
+
+        <div class="card-body">
+            <div class="card-title"><a asp-controller="Customer" asp-action="Details" asp-route-id="@Model.RouteId" style="text-decoration:none; font-size:24px;">@Model.StartLocation <i class="fas fa-long-arrow-alt-right"></i> @Model.EndLocation</a></div>
+            <p class="card-text"><b style="font-size:19px;">Güzergah:</b>  @Model.StartLocation > @Model.FirstStation > @Model.SecondStation > @Model.ThirdStation > @Model.EndLocation</p>
+
+            <p style=" font-size:24px; text-align:center;">
+                <b>@Model.Date </b>
+                - @Model.Time
+            </p>
+            <div class="text-center">
+                <a asp-controller="Customer" asp-action="Details" asp-route-id="@Model.RouteId" class="btn btn-primary btn-sm">Rezervasyon</a>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

@@ -24,7 +24,7 @@ namespace EF_CodeFirst.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Name=ConnectionStrings:LibraryConn");
+                optionsBuilder.UseSqlServer("Name=ConnectionStrings:HomeLibraryConn");
             }
         }
     }

@@ -1,8 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using EF_CodeFirst.Models;
+using BiletKolay.Business.Abstract;
+using BiletKolay.Business.Concrete;
+using BiletKolay.Data.Abstract;
+using BiletKolay.Data.Concrete.EfCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,8 +9,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace EF_CodeFirst
+namespace BiletKolay.WebUI
 {
     public class Startup
     {
@@ -26,8 +29,16 @@ namespace EF_CodeFirst
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<LibraryContext>(options => options.  UseSqlServer(Configuration.GetConnectionString("HomeLibraryConn")));
-            
+
+            services.AddScoped<ICityRepository, EfCoreCityRepository>();
+            services.AddScoped<IRouteRepository, EfCoreRouteRepository>();
+            services.AddScoped<ITicketRepository, EfCoreTicketRepository>();
+
+            services.AddScoped<ICityService, CityManager>();
+            services.AddScoped<IRouteService, RouteManager>();
+            services.AddScoped<ITicketService, TicketManager>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +46,7 @@ namespace EF_CodeFirst
         {
             if (env.IsDevelopment())
             {
+                SeedDatabase.Seed();
                 app.UseDeveloperExceptionPage();
             }
             else
